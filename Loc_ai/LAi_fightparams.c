@@ -199,7 +199,8 @@ float LAi_CalcDeadExp(aref attack, aref enemy)
 	float dmg = (0.5 + 4.0*LAi_GetCharacterFightLevel(enemy))*LAi_GetCharacterMaxHP(enemy);
 	dmg = dmg*((1.0 + re*0.5)/(1.0 + ra*0.5));
 	// also give money
-	//attack.money = attack.money + enemy.money;
+	attack.money = sti(attack.money) + sti(enemy.money);
+	Log_SetStringToLog(" Gold gained for kill");
 	return dmg*0.5;
 }
 

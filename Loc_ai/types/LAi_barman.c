@@ -206,7 +206,7 @@ void LAi_type_barman_NeedDialog(aref chr, aref by)
 bool LAi_type_barman_CanDialog(aref chr, aref by)
 {
 	//Согласимся на диалог
-	if(chr.chr_ai.type.state == "afraid") return false;
+	if(chr.chr_ai.type.state == "afraid") return true;
 	if(chr.chr_ai.tmpl == LAI_TMPL_STAY) return true;
 	if(chr.chr_ai.tmpl == LAI_TMPL_ANI) return true;
 	return false;
