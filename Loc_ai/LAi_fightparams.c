@@ -52,7 +52,7 @@ float LAi_BladeCalcExperience(aref attack, aref enemy, float dmg)
 	}
 	if(ra < 1.0) ra = 1.0;
 	if(re < 1.0) re = 1.0;
-	dmg = dmg*((1.0 + re*0.5)/(1.0 + ra*0.5));
+	dmg = 4*dmg*((1.0 + re*0.5)/(1.0 + ra*0.5));
 	return dmg;
 }
 
@@ -148,8 +148,8 @@ float LAi_GunCalcExperience(aref attack, aref enemy, float dmg)
 	}	
 	if(ra < 1.0) ra = 1.0;
 	if(re < 1.0) re = 1.0;
-	dmg = dmg*((1.0 + re*0.5)/(1.0 + ra*0.5));
-	return dmg;
+	dmg = ra*dmg*((1.0 + re*0.5)/(1.0 + ra*0.5));
+	return 4*dmg;
 }
 
 //Расчитаем текущую скорость перезарядки пистолета
@@ -196,12 +196,24 @@ float LAi_CalcDeadExp(aref attack, aref enemy)
 	}	
 	if(ra < 1.0) ra = 1.0;
 	if(re < 1.0) re = 1.0;		
-	float dmg = (0.5 + 4.0*LAi_GetCharacterFightLevel(enemy))*LAi_GetCharacterMaxHP(enemy);
-	dmg = dmg*((1.0 + re*0.5)/(1.0 + ra*0.5));
+	float dmg = 8.0*LAi_GetCharacterFightLevel(enemy)*LAi_GetCharacterMaxHP(enemy);
+	dmg = re*dmg*((1.0 + re*0.5)/(1.0 + ra*0.5));
 	// also give money
 	attack.money = sti(attack.money) + sti(enemy.money);
-	Log_SetStringToLog(" Gold gained for kill");
-	return dmg*0.5;
+	// give blade
+	
+	if(CheckAttribute(enemy,"blade"))
+	{
+		if(CheckAttribute(enemy,"blade.itemID"))
+		{
+			string blade = enemy.blade.itemID;
+		}
+		GiveItem2Character(attack, blade);
+	}
+	
+	//Log_SetStringToLog("Gold gained for kill");
+	
+	return dmg;
 }
 
 //--------------------------------------------------------------------------------
@@ -225,10 +237,10 @@ void LAi_ApplyCharacterBlockDamage(aref attack, aref enemy, float attackDmg, flo
 void LAi_ApplyCharacterBladeDamage(aref attack, aref enemy, float attackDmg, float hitDmg, bool isBlocked)
 {
 	//Если неубиваемый, то нетрогаем его
-	if(CheckAttribute(enemy, "chr_ai.immortal"))
-	{
-		if(sti(enemy.chr_ai.immortal) != 0) return;
-	}
+	//if(CheckAttribute(enemy, "chr_ai.immortal"))
+	//{
+	//	if(sti(enemy.chr_ai.immortal) != 0) return;
+	//}
 	//Применяем абилити
 	float pBreak = 0.0;
 	float critical = 0.0;
@@ -323,13 +335,13 @@ void LAi_ApplyCharacterBladeDamage(aref attack, aref enemy, float attackDmg, flo
 		exp = exp + LAi_CalcDeadExp(attack, enemy);
 		if(!isSetBalde)
 		{
-			LAi_ChangeReputation(attack, -3);
+			LAi_ChangeReputation(attack, -1);
 		}
 	}
 	if(!isSetBalde)
 	{
 		LAi_ChangeReputation(attack, -1);
-		exp = 0.0;
+		exp = exp*1;
 	}
 	if(!noExp) AddCharacterExp(attack, MakeInt(exp*0.5 + 0.5));
 }
@@ -338,10 +350,10 @@ void LAi_ApplyCharacterBladeDamage(aref attack, aref enemy, float attackDmg, flo
 void LAi_ApplyCharacterFireDamage(aref attack, aref enemy, float kDist)
 {
 	//Если неубиваемый, то нетрогаем его
-	if(CheckAttribute(enemy, "chr_ai.immortal"))
-	{
-		if(sti(enemy.chr_ai.immortal) != 0) return;
-	}
+	//if(CheckAttribute(enemy, "chr_ai.immortal"))
+	//{
+	//	if(sti(enemy.chr_ai.immortal) != 0) return;
+	//}
 	//Вероятность поподания
 	float p = LAi_GunCalcProbability(attack, kDist);
 	//Если промахнулись, то выйдем
@@ -349,6 +361,13 @@ void LAi_ApplyCharacterFireDamage(aref attack, aref enemy, float kDist)
 	//Начисляем повреждение
 	float damage = LAi_GunCalcDamage(attack);
 	//Аттака своей группы
+	float kDmg = 1.0;
+	// reduce damage from perks
+	if(IsCharacterPerkOn(enemy, "BasicDefense")) kDmg = 0.9;
+	if(IsCharacterPerkOn(enemy, "AdvancedDefense")) kDmg = 0.8;
+	if(IsCharacterPerkOn(enemy, "SwordplayProfessional")) kDmg = 0.6;
+	damage = damage*kDmg;
+	
 	bool noExp = false;
 	if(CheckAttribute(attack, "chr_ai.group"))
 	{
@@ -375,14 +394,14 @@ void LAi_ApplyCharacterFireDamage(aref attack, aref enemy, float kDist)
 		exp = exp + LAi_CalcDeadExp(attack, enemy);
 		if(!isSetBalde)
 		{
-			LAi_ChangeReputation(attack, -3);
-			exp = exp*0.05;
+			LAi_ChangeReputation(attack, -1);
+			exp = exp*0.5;
 		}
 	}
 	if(!isSetBalde)
 	{
 		LAi_ChangeReputation(attack, -1);
-		exp = 0.0;
+		exp = exp*0.5;
 	}
 	if(!noExp) AddCharacterExp(attack, MakeInt(exp*0.5 + 0.5));
 }
@@ -414,7 +433,7 @@ float LAi_NPC_GetAttackDefence()
 {
 	aref chr = GetEventData();
 	float level = LAi_GetCharacterFightLevel(chr);
-	npc_return_tmp = 0.008 + level*0.08;
+	npc_return_tmp = 0.2 + level*0.8;
 	return npc_return_tmp;
 }
 
@@ -432,7 +451,7 @@ float LAi_NPC_GetFireActive()
 {
 	aref chr = GetEventData();
 	float level = LAi_GetCharacterFightLevel(chr);
-	npc_return_tmp = 0.001 + level*0.06;
+	npc_return_tmp = 0.1 + level*0.1;
 	return npc_return_tmp;
 }
 

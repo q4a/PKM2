@@ -328,13 +328,14 @@ void CreateCharacters()
 
 	// MainCharacter start parameters
 	ch.Ship.HP = 300;
+	LAi_SetHP(ch, 60.0, 60.0);
 	ch.Ship.crew.quantity = 30;
 	SetCharacterGoods(&Characters[0],GOOD_BALLS,300);
 	SetCharacterGoods(&Characters[0],GOOD_GRAPES,100);
 	SetCharacterGoods(&Characters[0],GOOD_KNIPPELS,100);
 	SetCharacterGoods(&Characters[0],GOOD_BOMBS,300);
-	SetCharacterGoods(&Characters[0],GOOD_CHOCOLATE,100);
-	SetCharacterGoods(&Characters[0],GOOD_LEATHER,25);
+	SetCharacterGoods(&Characters[0],GOOD_CHOCOLATE,20);
+	SetCharacterGoods(&Characters[0],GOOD_LEATHER,5);
 
 	Characters[GetCharacterIndex("Danielle")].model.animation = "woman";
 

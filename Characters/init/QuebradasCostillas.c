@@ -483,7 +483,7 @@ int CreateQuebradasCostillasCharacters(int n)
 	ch.reputation = "25";
 	ch.experience = "250000";
 	ch.skill.Leadership = "4";
-	ch.skill.Fencing = "8";
+	ch.skill.Fencing = "10";
 	ch.skill.Sailing = "6";
 	ch.skill.Accuracy = "4";
 	ch.skill.Cannons = "7";
@@ -492,7 +492,7 @@ int CreateQuebradasCostillasCharacters(int n)
 	ch.skill.Defence = "3";
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "2";
-	ch.money = "10000";
+	ch.money = "25000";
 	ch.Ship.Name = "Dud";
 	ch.ship.type = SHIP_CORVETTE2_ENGLAND;
 	ch.ship.cargo.goods.bombs = 1000;
@@ -501,9 +501,8 @@ int CreateQuebradasCostillasCharacters(int n)
 	LAi_SetWarriorType(ch);
 	LAi_warrior_DialogEnable(ch, true);
 	LAi_warrior_SetStay(ch, true);
-	Lai_SetImmortal(ch, true);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
-	LAi_SetHP(ch, 160.0, 160.0);
+	LAi_SetHP(ch, 250.0, 250.0);
 	LAi_group_MoveCharacter(ch, "QC_CITIZENS");
 	ch.greeting = "Gr_Isenbrandt Jurcksen";
 	n = n + 1;

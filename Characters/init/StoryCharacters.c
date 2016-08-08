@@ -33,10 +33,10 @@ int CreateStoryCharacters(int n)
 	ch.skill.Defence = "4";
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
-	ch.money = "10";
+	ch.money = "1000";
 	LAi_SetMerchantType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
-	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_SetHP(ch, 160.0, 160.0);
 	LAi_NoRebirthEnable(ch);
 	n = n + 1;
 
@@ -73,7 +73,7 @@ int CreateStoryCharacters(int n)
 	ch.money = "10";
 	LAi_SetPatrolType(ch);
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
-	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_SetHP(ch, 120.0, 120.0);
 	LAi_group_MoveCharacter(ch, "FRANCE_SOLDIERS");
 	ch.greeting = "Gr_Patrol";
 	n = n + 1;
@@ -436,7 +436,7 @@ int CreateStoryCharacters(int n)
 	ch.ShipSlot3.Name="NoName";
 	ch.quest.killed.pirates = "0";
 	LAi_SetLoginTime(ch, 0.0, 24.0);
-	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_SetHP(ch, 160.0, 160.0);
 	n = n + 1;
 
 
@@ -709,7 +709,7 @@ int CreateStoryCharacters(int n)
 	ch.money = "10";
 	LAi_SetGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
-	LAi_SetHP(ch, 30.0, 80.0);
+	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "FRANCE_SOLDIERS");
 	LAi_NoRebirthEnable(ch);
 	n = n + 1;
@@ -746,7 +746,7 @@ int CreateStoryCharacters(int n)
 	ch.money = "10";
 	LAi_SetGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
-	LAi_SetHP(ch, 30.0, 80.0);
+	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "FRANCE_SOLDIERS");
 	LAi_NoRebirthEnable(ch);
 	n = n + 1;
@@ -843,7 +843,7 @@ int CreateStoryCharacters(int n)
 	ch.reputation = "None";
 	ch.experience = "0";
 	ch.skill.Leadership = "1";
-	ch.skill.Fencing = "3";
+	ch.skill.Fencing = "6";
 	ch.skill.Sailing = "1";
 	ch.skill.Accuracy = "6";
 	ch.skill.Cannons = "1";
@@ -852,10 +852,10 @@ int CreateStoryCharacters(int n)
 	ch.skill.Defence = "1";
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
-	ch.money = "10";
+	ch.money = "1000";
 	LAi_SetActorType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
-	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_SetHP(ch, 160.0, 160.0);
 	LAi_NoRebirthEnable(ch);
 	ch.greeting = "Gr_Amiel Berangere";
 	n = n + 1;
@@ -1064,7 +1064,7 @@ int CreateStoryCharacters(int n)
 	ch.reputation = "None";
 	ch.experience = "0";
 	ch.skill.Leadership = "1";
-	ch.skill.Fencing = "4";
+	ch.skill.Fencing = "8";
 	ch.skill.Sailing = "1";
 	ch.skill.Accuracy = "1";
 	ch.skill.Cannons = "1";
@@ -1099,7 +1099,7 @@ int CreateStoryCharacters(int n)
 	ch.reputation = "None";
 	ch.experience = "0";
 	ch.skill.Leadership = "1";
-	ch.skill.Fencing = "4";
+	ch.skill.Fencing = "8";
 	ch.skill.Sailing = "1";
 	ch.skill.Accuracy = "1";
 	ch.skill.Cannons = "1";
@@ -1134,7 +1134,7 @@ int CreateStoryCharacters(int n)
 	ch.reputation = "None";
 	ch.experience = "0";
 	ch.skill.Leadership = "1";
-	ch.skill.Fencing = "4";
+	ch.skill.Fencing = "8";
 	ch.skill.Sailing = "1";
 	ch.skill.Accuracy = "1";
 	ch.skill.Cannons = "1";
@@ -1169,7 +1169,7 @@ int CreateStoryCharacters(int n)
 	ch.reputation = "None";
 	ch.experience = "0";
 	ch.skill.Leadership = "1";
-	ch.skill.Fencing = "4";
+	ch.skill.Fencing = "8";
 	ch.skill.Sailing = "1";
 	ch.skill.Accuracy = "1";
 	ch.skill.Cannons = "1";
@@ -1204,7 +1204,7 @@ int CreateStoryCharacters(int n)
 	ch.reputation = "None";
 	ch.experience = "0";
 	ch.skill.Leadership = "1";
-	ch.skill.Fencing = "4";
+	ch.skill.Fencing = "8";
 	ch.skill.Sailing = "1";
 	ch.skill.Accuracy = "1";
 	ch.skill.Cannons = "1";
@@ -1239,7 +1239,7 @@ int CreateStoryCharacters(int n)
 	ch.reputation = "None";
 	ch.experience = "0";
 	ch.skill.Leadership = "1";
-	ch.skill.Fencing = "4";
+	ch.skill.Fencing = "8";
 	ch.skill.Sailing = "1";
 	ch.skill.Accuracy = "1";
 	ch.skill.Cannons = "1";
@@ -1275,7 +1275,7 @@ int CreateStoryCharacters(int n)
 	ch.reputation = "None";
 	ch.experience = "0";
 	ch.skill.Leadership = "1";
-	ch.skill.Fencing = "4";
+	ch.skill.Fencing = "8";
 	ch.skill.Sailing = "1";
 	ch.skill.Accuracy = "1";
 	ch.skill.Cannons = "1";
@@ -1310,7 +1310,7 @@ int CreateStoryCharacters(int n)
 	ch.reputation = "None";
 	ch.experience = "0";
 	ch.skill.Leadership = "1";
-	ch.skill.Fencing = "4";
+	ch.skill.Fencing = "8";
 	ch.skill.Sailing = "1";
 	ch.skill.Accuracy = "1";
 	ch.skill.Cannons = "1";
@@ -1345,7 +1345,7 @@ int CreateStoryCharacters(int n)
 	ch.reputation = "None";
 	ch.experience = "0";
 	ch.skill.Leadership = "1";
-	ch.skill.Fencing = "4";
+	ch.skill.Fencing = "8";
 	ch.skill.Sailing = "1";
 	ch.skill.Accuracy = "1";
 	ch.skill.Cannons = "1";
@@ -1380,7 +1380,7 @@ int CreateStoryCharacters(int n)
 	ch.reputation = "None";
 	ch.experience = "0";
 	ch.skill.Leadership = "1";
-	ch.skill.Fencing = "4";
+	ch.skill.Fencing = "8";
 	ch.skill.Sailing = "1";
 	ch.skill.Accuracy = "1";
 	ch.skill.Cannons = "1";
@@ -1415,7 +1415,7 @@ int CreateStoryCharacters(int n)
 	ch.reputation = "None";
 	ch.experience = "0";
 	ch.skill.Leadership = "1";
-	ch.skill.Fencing = "4";
+	ch.skill.Fencing = "8";
 	ch.skill.Sailing = "1";
 	ch.skill.Accuracy = "1";
 	ch.skill.Cannons = "1";
@@ -1450,7 +1450,7 @@ int CreateStoryCharacters(int n)
 	ch.reputation = "None";
 	ch.experience = "0";
 	ch.skill.Leadership = "1";
-	ch.skill.Fencing = "4";
+	ch.skill.Fencing = "8";
 	ch.skill.Sailing = "1";
 	ch.skill.Accuracy = "1";
 	ch.skill.Cannons = "1";
@@ -1486,7 +1486,7 @@ int CreateStoryCharacters(int n)
 	ch.reputation = "None";
 	ch.experience = "0";
 	ch.skill.Leadership = "1";
-	ch.skill.Fencing = "4";
+	ch.skill.Fencing = "8";
 	ch.skill.Sailing = "1";
 	ch.skill.Accuracy = "1";
 	ch.skill.Cannons = "1";
@@ -1498,7 +1498,7 @@ int CreateStoryCharacters(int n)
 	ch.money = "10";
 	LAi_SetPatrolType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
-	LAi_SetHP(ch, 40.0, 80.0);
+	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "FRANCE_SOLDIERS");
 	LAi_NoRebirthEnable(ch);
 	ch.greeting = "Gr_French_arrester";
@@ -1522,7 +1522,7 @@ int CreateStoryCharacters(int n)
 	ch.reputation = "None";
 	ch.experience = "0";
 	ch.skill.Leadership = "1";
-	ch.skill.Fencing = "4";
+	ch.skill.Fencing = "8";
 	ch.skill.Sailing = "1";
 	ch.skill.Accuracy = "1";
 	ch.skill.Cannons = "1";
@@ -1534,7 +1534,7 @@ int CreateStoryCharacters(int n)
 	ch.money = "10";
 	LAi_SetPatrolType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
-	LAi_SetHP(ch, 40.0, 80.0);
+	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "FRANCE_SOLDIERS");
 	LAi_NoRebirthEnable(ch);
 	ch.greeting = "Gr_French_arrester";
@@ -1558,7 +1558,7 @@ int CreateStoryCharacters(int n)
 	ch.reputation = "None";
 	ch.experience = "0";
 	ch.skill.Leadership = "1";
-	ch.skill.Fencing = "4";
+	ch.skill.Fencing = "8";
 	ch.skill.Sailing = "1";
 	ch.skill.Accuracy = "1";
 	ch.skill.Cannons = "1";
@@ -1570,7 +1570,7 @@ int CreateStoryCharacters(int n)
 	ch.money = "10";
 	LAi_SetPatrolType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
-	LAi_SetHP(ch, 40.0, 80.0);
+	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_NoRebirthEnable(ch);
 	ch.greeting = "Gr_French_arrester";
 	n = n + 1;
@@ -1593,7 +1593,7 @@ int CreateStoryCharacters(int n)
 	ch.reputation = "None";
 	ch.experience = "0";
 	ch.skill.Leadership = "1";
-	ch.skill.Fencing = "4";
+	ch.skill.Fencing = "8";
 	ch.skill.Sailing = "1";
 	ch.skill.Accuracy = "1";
 	ch.skill.Cannons = "1";
@@ -2093,7 +2093,7 @@ int CreateStoryCharacters(int n)
 	ch.reputation = "None";
 	ch.experience = "0";
 	ch.skill.Leadership = "1";
-	ch.skill.Fencing = "9";
+	ch.skill.Fencing = "10";
 	ch.skill.Sailing = "1";
 	ch.skill.Accuracy = "1";
 	ch.skill.Cannons = "1";
@@ -2102,7 +2102,7 @@ int CreateStoryCharacters(int n)
 	ch.skill.Defence = "1";
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
-	ch.money = "10";
+	ch.money = "10000";
 	LAi_SetGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
@@ -3019,7 +3019,7 @@ int CreateStoryCharacters(int n)
 	ch.reputation = "40";
 	ch.experience = "240000";
 	ch.skill.Leadership = "2";
-	ch.skill.Fencing = "7";
+	ch.skill.Fencing = "10";
 	ch.skill.Sailing = "1";
 	ch.skill.Accuracy = "6";
 	ch.skill.Cannons = "5";
@@ -3028,7 +3028,7 @@ int CreateStoryCharacters(int n)
 	ch.skill.Defence = "4";
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
-	ch.money = "10";
+	ch.money = "10000";
 	LAi_SetMerchantType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);

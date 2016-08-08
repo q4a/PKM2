@@ -5171,7 +5171,7 @@ void InitShips()
 	refship.SubSeaDependWeight = 0.9;
 	refship.TurnDependWeight = 0.8;
 
-	refShip.CanEncounter	= false;
+	//refShip.CanEncounter	= false;
 
 	refship.InertiaAccelerationX	= 0.2;	refship.InertiaBrakingX		= 2.0;
 	refship.InertiaAccelerationY	= 6;	refship.InertiaBrakingY		= 3;
@@ -5206,7 +5206,7 @@ void InitShips()
 	refship.SubSeaDependWeight = 0.9;
 	refship.TurnDependWeight = 0.8;
 
-	refShip.CanEncounter	= false;
+	//refShip.CanEncounter	= false;
 
 	refship.InertiaAccelerationX	= 0.2;	refship.InertiaBrakingX		= 2.0;
 	refship.InertiaAccelerationY	= 6;	refship.InertiaBrakingY		= 3;
@@ -5241,7 +5241,7 @@ void InitShips()
 	refship.SubSeaDependWeight = 0.9;
 	refship.TurnDependWeight = 0.8;
 
-	refShip.CanEncounter	= false;
+	//refShip.CanEncounter	= false;
 
 	refship.InertiaAccelerationX	= 0.2;	refship.InertiaBrakingX		= 2.0;
 	refship.InertiaAccelerationY	= 6;	refship.InertiaBrakingY		= 3;
@@ -5276,7 +5276,7 @@ void InitShips()
 	refship.SubSeaDependWeight = 0.9;
 	refship.TurnDependWeight = 0.8;
 
-	refShip.CanEncounter	= false;
+	//refShip.CanEncounter	= false;
 
 	refship.InertiaAccelerationX	= 0.2;	refship.InertiaBrakingX		= 2.0;
 	refship.InertiaAccelerationY	= 6;	refship.InertiaBrakingY		= 3;
@@ -5311,7 +5311,7 @@ void InitShips()
 	refship.SubSeaDependWeight = 0.9;
 	refship.TurnDependWeight = 0.8;
 
-	refShip.CanEncounter	= false;
+	//refShip.CanEncounter	= false;
 
 	refship.InertiaAccelerationX	= 0.2;	refship.InertiaBrakingX		= 2.0;
 	refship.InertiaAccelerationY	= 6;	refship.InertiaBrakingY		= 3;
@@ -5346,7 +5346,7 @@ void InitShips()
 	refship.SubSeaDependWeight = 0.9;
 	refship.TurnDependWeight = 0.8;
 
-	refShip.CanEncounter	= false;
+	//refShip.CanEncounter	= false;
 
 	refship.InertiaAccelerationX	= 0.2;	refship.InertiaBrakingX		= 2.0;
 	refship.InertiaAccelerationY	= 6;	refship.InertiaBrakingY		= 3;
@@ -5381,7 +5381,7 @@ void InitShips()
 	refship.SubSeaDependWeight = 0.9;
 	refship.TurnDependWeight = 0.8;
 
-	refShip.CanEncounter	= false;
+	//refShip.CanEncounter	= false;
 
 	refship.InertiaAccelerationX	= 0.2;	refship.InertiaBrakingX		= 2.0;
 	refship.InertiaAccelerationY	= 6;	refship.InertiaBrakingY		= 3;
@@ -5416,7 +5416,7 @@ void InitShips()
 	refship.SubSeaDependWeight = 0.9;
 	refship.TurnDependWeight = 0.8;
 
-	refShip.CanEncounter	= false;
+	//refShip.CanEncounter	= false;
 
 	refship.InertiaAccelerationX	= 0.2;	refship.InertiaBrakingX		= 2.0;
 	refship.InertiaAccelerationY	= 6;	refship.InertiaBrakingY		= 3;
@@ -5451,7 +5451,7 @@ void InitShips()
 	refship.SubSeaDependWeight = 0.9;
 	refship.TurnDependWeight = 0.8;
 
-	refShip.CanEncounter	= false;
+	//refShip.CanEncounter	= false;
 
 	refship.InertiaAccelerationX	= 0.2;	refship.InertiaBrakingX		= 2.0;
 	refship.InertiaAccelerationY	= 6;	refship.InertiaBrakingY		= 3;
@@ -5486,7 +5486,7 @@ void InitShips()
 	refship.SubSeaDependWeight = 0.9;
 	refship.TurnDependWeight = 0.8;
 
-	refShip.CanEncounter	= false;
+	//refShip.CanEncounter	= false;
 
 	refship.InertiaAccelerationX	= 0.2;	refship.InertiaBrakingX		= 2.0;
 	refship.InertiaAccelerationY	= 6;	refship.InertiaBrakingY		= 3;
@@ -5521,7 +5521,7 @@ void InitShips()
 	refship.SubSeaDependWeight = 0.9;
 	refship.TurnDependWeight = 0.8;
 
-	refShip.CanEncounter	= false;
+	//refShip.CanEncounter	= false;
 
 	refship.InertiaAccelerationX	= 0.2;	refship.InertiaBrakingX		= 2.0;
 	refship.InertiaAccelerationY	= 10;	refship.InertiaBrakingY		= 6;
@@ -5549,7 +5549,7 @@ void InitShips()
     refShip.HP              = 100;
     refShip.SP              = 100;
 
-	refShip.CanEncounter	= false;
+	//refShip.CanEncounter	= false;
 
 	refship.InertiaAccelerationX	= 3.0;	refship.InertiaBrakingX		= 2.0;
 	refship.InertiaAccelerationY	= 14;	refship.InertiaBrakingY		= 5;
@@ -5586,7 +5586,7 @@ void InitShips()
 	refship.SubSeaDependWeight = 0.9;
 	refship.TurnDependWeight = 0.8;
 
-	refShip.CanEncounter	= false;
+	//refShip.CanEncounter	= false;
 
 	refship.InertiaAccelerationX	= 3.0;	refship.InertiaBrakingX		= 2.0;
 	refship.InertiaAccelerationY	= 14;	refship.InertiaBrakingY		= 5;

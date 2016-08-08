@@ -773,7 +773,7 @@ int CreateOxbayCharacters(int n)
 	ch.skill.Defence = "1";
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
-	ch.money = "1";
+	ch.money = "100";
 	ch.quest.sex = 0;
 	ch.sex.time = 0;
 	LAi_SetWaitressType(ch);
